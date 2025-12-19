@@ -1,5 +1,4 @@
 const KEY = "blogs";
-
 export const getBlogs = () =>
   JSON.parse(localStorage.getItem(KEY)) || [];
 
