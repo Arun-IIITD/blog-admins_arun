@@ -5,6 +5,7 @@ export default function BlogForm({ onSave }) {
     title: "",
     category: "",
     author: "",
+    description: "",
     status: "Draft",
   });
 
@@ -20,7 +21,7 @@ export default function BlogForm({ onSave }) {
       date: new Date().toISOString(),
     });
 
-    setForm({ title: "", category: "", author: "", status: "Draft" });
+    setForm({ title: "", category: "", author: "", description: "",status: "Draft" });
   };
 
   return (
@@ -43,6 +44,12 @@ export default function BlogForm({ onSave }) {
         placeholder="Author"
         value={form.author}
         onChange={(e) => setForm({ ...form, author: e.target.value })}
+      />
+
+      <input
+        placeholder="Description"
+        value={form.description}
+        onChange={(e) => setForm({ ...form, description: e.target.value })}
       />
 
       <select

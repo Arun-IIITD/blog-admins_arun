@@ -6,6 +6,7 @@ export default function BlogList({ blogs = [], onDelete }) {
           <th>Title</th>
           <th>Category</th>
           <th>Author</th>
+           <th>Description</th>
           <th>Status</th>
           <th>Action</th>
         </tr>
@@ -24,6 +25,7 @@ export default function BlogList({ blogs = [], onDelete }) {
               <td>{b.title}</td>
               <td>{b.category}</td>
               <td>{b.author}</td>
+              <td>{b.description}</td>
               <td>{b.status}</td>
               <td>
                 <button className="delete" onClick={() => onDelete(b.id)}>
